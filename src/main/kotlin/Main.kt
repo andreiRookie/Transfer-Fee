@@ -13,7 +13,7 @@ fun main() {
             }
             val amount = input?.toDouble() ?: return
 
-            val transferFee = transferFeeCalculator(amount)
+            val transferFee = calculateTransferFee(amount)
 
             println("При сумме перевода $amount руб. комиссия составит: ${feeToString(transferFee)} руб.")
 
@@ -23,7 +23,9 @@ fun main() {
     }
 }
 
-fun transferFeeCalculator(amount: Double): UInt {
+
+
+fun calculateTransferFee(amount: Double): UInt {
 
     val amountInKopecks = (amount * 100)
 
