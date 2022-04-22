@@ -36,7 +36,7 @@ fun calculateTransferFee(amount: Double): UInt {
     return result
 }
 
-fun feeToString(input: Any): String {
+fun feeToString(input: UInt): String {
 
     val str = input.toString()
 
